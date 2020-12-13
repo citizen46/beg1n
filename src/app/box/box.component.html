@@ -1,0 +1,78 @@
+    <div style="padding:5%;">
+    <div class="wrap outerbox">
+      <div style="padding:30px;">
+        <!--Start of Form-->
+                <form [formGroup]="skillForm" novalidate id="formId" (ngSubmit)="onSubmit()">
+         <!--First Name-->
+                  <div class="form-group">
+              <div class="e-float-input">
+                <input type="text"/>
+                <span class="e-float-line e-label-top"></span>
+                <label class="e-float-text e-label-top">First Name:</label>
+                </div>
+              </div>
+         <!--Last Name + Required-->
+            <div class="form-group" style="padding-top:10px;">
+              <div class="e-float-input">
+                <input type="text" formControlName="lastname" name="lastname" minlength="1" />
+                <span class="e-float-line e-label-top"></span>
+                <label class="e-float-text e-label-top">last Name:</label>
+                <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                  <div *ngIf="lastname.errors.required">
+                    Last Name is required.
+                  </div>
+                  <div *ngIf="lastname.errors.minlength">
+                    Name must be at least 1 characters long.
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Title-->
+            <div class="form-group" >
+              <ejs-combobox id='comboelement' [dataSource]='data' placeholder="Title" formControlName="title" name="title"></ejs-combobox>
+            </div>
+          <!--Date of birth + Required-->
+            <div class="form-group" >
+              <ejs-datepicker strictMode='true' #ejDatePicker formControlName="datepicker" name="datepicker" placeholder='Date of Birth' floatLabelType='Auto' [value]='dateValue' [min]='minDate' [max]='maxDate'>
+              </ejs-datepicker>
+              <div *ngIf="datepicker.invalid && (datepicker.dirty||datepicker.touched)" class="alert alert-danger">
+                  Enter DOB in MM/dd/yyyy.
+              </div>
+            </div>
+            <div class="form-group footer" style="padding:10px;">
+              <button ejs-button id="submitbutton" class="e-btn e-success" type="submit" [disabled]="!skillForm.valid">Submit</button>
+              <button ejs-button class="e-btn e-warning" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    <link href='https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css' rel='stylesheet' />
+
+
+
+
+
+<!--<div class="wrap">
+    <form>
+        <ejs-textbox placeholder="First Name" ></ejs-textbox>
+        <br/>
+        <br/>
+        <br/>
+        <ejs-textbox [(ngModel)]="lname" placeholder="Last Name" (change)="on_ChangeInput()"></ejs-textbox>
+        <br/>
+        <ejs-combobox id='comboelement' [dataSource]='data' placeholder="Title"></ejs-combobox>
+        <ejs-datepicker strictMode='true' format='dd/MM/yyyy' placeholder='Date of Birth' [value]='dateValue' [min]='minDate' [max]='maxDate'></ejs-datepicker>
+        <br/>
+        <button ejs-button type="submit" [disabled]="!lname">Submit</button>
+    </form>
+
+<form>
+<ejs-combobox id='comboelement' [dataSource]='data' placeholder="Title"></ejs-combobox>
+<input class="e-input" type="text" placeholder="First Name">
+<input class="e-input" type="text" placeholder="Last Name">
+<ejs-datepicker strictMode='true' format='dd/MM/yyyy' placeholder='Date of Birth' [value]='dateValue' [min]='minDate' [max]='maxDate'></ejs-datepicker>
+<button ejs-button type="submit" [disabled]="true">Submit</button>
+</form>
+
+</div>-->

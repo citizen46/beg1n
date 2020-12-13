@@ -1,0 +1,152 @@
+.e-input-picture:before {
+    content: '\e335';
+    font-family: e-icons;
+  }
+
+  .bootstrap4 .e-input-picture:before {
+    content: '\e776';
+  }
+
+  .e-input-calendar:before {
+    content: '\e901';
+    font-family: e-icons;
+    font-size: 13px;
+  }
+
+  .fabric .e-input-calendar:before,
+  .highcontrast .e-input-calendar:before {
+    content:'\e93a';
+  }
+
+  .bootstrap .e-input-calendar:before {
+    content:'\e960';
+  }
+
+  .bootstrap4 .e-input-calendar:before {
+    content:'\e7be';
+  }
+
+  .content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 185px;
+  }
+
+  .content-wrapper div.row {
+    padding: 15px 0px;
+  }
+    
+  .control-label {
+    padding: 24px 0px 0px 0px;
+    font-size: 12px;
+    opacity: 0.54;
+  }
+    
+  @media only screen and (max-width: 480px) {
+    .content-wrapper {
+      width: 92%;
+    }
+    .e-input-section .col-xs-6,
+    .e-input-section .col-xs-4,
+    .e-input-section .col-xs-12 {
+      padding: 10px 5px;
+      width: 100%;
+    }
+    .content-wrapper div.row {
+      padding: 0px;
+    }
+  }
+
+  ejs-textbox .e-outline.e-float-input,
+  ejs-textbox .e-outline.e-float-input.e-control-wrapper {
+      margin-top: 0;
+  }
+
+  .fabric .row.material2,
+  .bootstrap .row.material2,
+  .bootstrap4 .row.material2,
+  .highcontrast .row.material2 {
+      display: none;
+  }
+  
+  #description td {
+    vertical-align: top;
+  }
+  #container {
+    visibility: hidden;
+  }
+  
+  #loader {  
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+  }
+  
+  .wrap {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 10px;
+    width: 260px;
+  }
+  
+  
+  .wrap label { /* csslint allow: adjoining-classes */
+   font-weight:bold;
+  }
+  
+  .wrap .e-input-group {/* csslint allow: adjoining-classes */
+     margin:25px 0;
+  }
+  
+  .e-input-group-icon:before {
+    font-family: e-icons;
+  }
+  
+  .e-input-group .e-input-group-icon.e-input-popup-date { /* csslint allow: adjoining-classes */
+    font-size:16px;
+  }
+  
+  .e-input-group.e-small .e-input-group-icon.e-input-popup-date { /* csslint allow: adjoining-classes */
+    font-size:14px;
+  }
+  
+  .e-input-group-icon.e-input-popup-date:before { /* csslint allow: adjoining-classes */
+    content: "";
+  }
+  #container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+#element {
+    display: block;
+    height: 350px;
+}
+
+#wrapper {
+    width: 250px;
+    margin: 0 auto;
+}
+.outerbox{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  margin:0 auto;
+  height:auto;
+  width: 300px;
+}
+.footer{
+    text-align: center;
+}
+#submitbutton{
+    margin-right:20px;
+}
